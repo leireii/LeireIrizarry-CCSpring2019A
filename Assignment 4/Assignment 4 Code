@@ -1,3 +1,16 @@
+/*
+Author: Leire Irizarry
+Assignment_4.pde
+Summary: This is essentially a loading screen with repetitive square shapes rotating endlessly.
+         There is user input/interaction which allows the user to explore the interaction
+         between Red, Green, and Blue values.
+Controls: R/r --> toggle red square
+          G/g --> toggle green square
+          B/b --> toggle blue square
+          * note: the opacity of each square is randomized each time the square is toggled
+          SPACE --> toggle background color (black or white)
+*/
+
 // float information for initial angles
 float angle1 = 0.0;
 float angle2 = 2.0;
