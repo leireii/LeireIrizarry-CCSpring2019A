@@ -1,4 +1,14 @@
-var grid = [200, 400, 600];
+/*
+Author: Leire Irizarry
+Description:
+Week 3 Sketch Remake in p5.js
+Interactive ball motion. Toggle grid collision with SPACE.
+WASD to change ball velocity in a certain direction.
+Click to begin the game.
+*/
+
+// global variables
+var grid = [200, 400, 600]; // grid coordinates, run thru w/ for loop
 var xPos;
 var yPos;
 var xVelocity = 1;
@@ -8,6 +18,7 @@ var yVelocity = 1;
 let start = false;
 let gridActive = false;
 
+// skeleton functions
 function setup(){
   createCanvas(600, 600);
   background(0);
@@ -17,6 +28,7 @@ function setup(){
 function draw(){
   background(0);
   stroke(255, 255, 255);
+  // for loop that itereates through every integer in the grid list
   for (let i = 0; i < grid.length; i++){
     line(grid[i], 0, grid[i], height);
     line(0, grid[i], width, grid[i]);
@@ -58,6 +70,7 @@ function draw(){
   }
 }
 
+// if you press a key...
 function keyPressed(){
   if (key == ' '){
     gridActive = !gridActive;
@@ -77,7 +90,7 @@ function keyPressed(){
 }
 
 function mouseClicked(){
-  start = !start;
-  xPos = mouseX;
+  start = !start; // toggle start
+  xPos = mouseX; 
   yPos = mouseY;
 }
